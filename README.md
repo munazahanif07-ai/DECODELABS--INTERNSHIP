@@ -1,92 +1,54 @@
-# Data Classification Using AI
+# Rule-Based AI Chatbot
 
 ## Description
 
-This is a basic AI-based data classification project developed as **Project 2** for the **DecodeLabs Industrial Training Kit - Batch 2026**.
+This is a simple rule-based AI chatbot developed as **Project 1** for the **DecodeLabs Industrial Training Kit - Batch 2026**.
 
-The project uses the **Iris dataset** and a **K-Nearest Neighbors (KNN)** classification model to classify flowers into three species: Setosa, Versicolor, and Virginica.
+The chatbot responds to predefined user inputs using a Python dictionary. It runs continuously and allows the user to interact with it until an exit command is entered.
 
 ## Features
 
-* Uses the built-in Iris dataset
-* Loads and analyzes the dataset
-* Splits data into training and testing sets
-* Uses feature scaling with StandardScaler
-* Finds the optimal K value for KNN
-* Trains a KNN classification model
-* Predicts flower species
-* Calculates accuracy and F1 score
-* Generates a confusion matrix
-* Generates a K tuning curve
-* Predicts the species of a new flower
+* Responds to predefined messages
+* Uses dictionary-based responses
+* Accepts user input continuously
+* Converts input to lowercase for easier matching
+* Handles unknown questions with a default response
+* Supports exit commands such as `bye`, `exit`, `quit`, and `goodbye`
 
 ## Technologies Used
 
 * Python
-* NumPy
-* Pandas
-* Scikit-learn
-* Matplotlib
-* K-Nearest Neighbors (KNN)
-* StandardScaler
+* Dictionary
+* Functions
+* While Loop
+* If-Else Statements
 
 ## How to Run
 
 1. Install Python on your computer.
 2. Open the project folder.
-3. Install the required libraries:
+3. Open Command Prompt or Terminal in the project folder.
+4. Run the following command:
 
 ```bash
-pip install numpy pandas scikit-learn matplotlib
+python chatbot.py
 ```
 
-4. Open Command Prompt or Terminal in the project folder.
-5. Run the following command:
-
-```bash
-python project2.py
-```
-
-6. The program will display the dataset information, model results, accuracy, F1 score, confusion matrix, and prediction.
+5. Start chatting with the chatbot.
 
 ## Example
 
 ```text
-STEP 1: DATASET OVERVIEW
+ChatBot: Hello! I'm your rule-based assistant. Type 'bye' to exit.
 
-Samples: 150, Features: 4, Classes: 3
+You: hello
+ChatBot: Hi there! How can I help you today?
 
-STEP 2: TRAIN-TEST SPLIT
+You: what is your name
+ChatBot: I'm ChatBot-1, DecodeLabs' first rule-based intern project.
 
-Training samples: 120
-Testing samples: 30
-
-STEP 3: FEATURE SCALING
-
-Post-scaling train mean (~0): [0. 0. 0. 0.]
-Post-scaling train std  (~1): [1. 1. 1. 1.]
-
-STEP 4: CHOOSING K
-
-Optimal K found: ...
-
-STEP 6: OUTPUT VALIDATION
-
-Accuracy: ...
-F1 Score (macro avg): ...
-
-STEP 7: PREDICTION ON NEW DATA
-
-New sample [[5.1, 3.5, 1.4, 0.2]] -> Predicted species: setosa
-```
-
-## Output Files
-
-The project generates two graph files:
-
-```text
-k_tuning_curve.png
-confusion_matrix.png
+You: bye
+ChatBot: Goodbye! Have a great day.
 ```
 
 ## Project By
@@ -96,3 +58,4 @@ Munazza Hanif
 ## Training Program
 
 DecodeLabs Industrial Training Kit - Batch 2026
+
