@@ -1,61 +1,48 @@
-# Rule-Based AI Chatbot
+# Project 3 Capstone: Tech Stack Recommender
+Built for **DecodeLabs Artificial Intelligence Industrial Training Kit (2026)**.
 
-## Description
+## 📌 Project Overview
+This project is a content-based recommendation engine that maps a user's skills to relevant job roles (career paths). It uses **TF-IDF Weighting** and **Cosine Similarity** built entirely from scratch in pure Python without external ML libraries.
 
-This is a simple rule-based AI chatbot developed as **Project 1** for the **DecodeLabs Industrial Training Kit - Batch 2026**.
+### Core Architecture
+- **TF-IDF:** Down-weights common skills (like "Python") and boosts rare, descriptive skills (like "Kubernetes") to ensure accurate recommendations.
+- **Cosine Similarity:** Measures the angle between your profile vector and job vectors to capture alignment regardless of length.
 
-The chatbot responds to predefined user inputs using a Python dictionary. It runs continuously and allows the user to interact with it until an exit command is entered.
+---
 
-## Features
-
-* Responds to predefined messages
-* Uses dictionary-based responses
-* Accepts user input continuously
-* Converts input to lowercase for easier matching
-* Handles unknown questions with a default response
-* Supports exit commands such as `bye`, `exit`, `quit`, and `goodbye`
-
-## Technologies Used
-
-* Python
-* Dictionary
-* Functions
-* While Loop
-* If-Else Statements
-
-## How to Run
-
-1. Install Python on your computer.
-2. Open the project folder.
-3. Open Command Prompt or Terminal in the project folder.
-4. Run the following command:
-
-```bash
-python chatbot.py
-```
-
-5. Start chatting with the chatbot.
-
-## Example
-
+## 📂 Project Structure
 ```text
-ChatBot: Hello! I'm your rule-based assistant. Type 'bye' to exit.
-
-You: hello
-ChatBot: Hi there! How can I help you today?
-
-You: what is your name
-ChatBot: I'm ChatBot-1, DecodeLabs' first rule-based intern project.
-
-You: bye
-ChatBot: Goodbye! Have a great day.
+├── tech_stack_recommender.py  # Core Application Engine
+├── raw_skills.csv             # Ingestion Database File
+└── README.md                  # Project Documentation
 ```
 
-## Project By
+---
 
-Munazza Hanif
+## 🛠️ Setup & Dataset
+1. Ensure **Python 3.x** is installed on your computer.
+2. In the same folder as your script, ensure a file named `raw_skills.csv` exists with your dataset:
+   ```csv
+   job_role,skills
+   Data Scientist,Python,SQL,Machine Learning,Data Analysis
+   Cloud Engineer,Cloud Computing,AWS,Linux,Automation,Docker
+   DevOps Engineer,Automation,Jenkins,Docker,Kubernetes,Linux
+   Frontend Developer,HTML,CSS,JavaScript,React,Web Design
+   ```
 
-## Training Program
+---
 
-DecodeLabs Industrial Training Kit - Batch 2026
+## 🚀 How to Run
 
+### 1. Interactive Mode
+Run the script normally and type your skills when prompted:
+```bash
+python tech_stack_recommender.py
+```
+*(Note: You must input a minimum of 3 skills separated by commas, e.g., `Python, SQL, Automation`)*
+
+### 2. Command Line Arguments
+Pass your skills directly when triggering the script:
+```bash
+python tech_stack_recommender.py "Python, Cloud Computing, Automation"
+```
